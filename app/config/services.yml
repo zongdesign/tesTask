@@ -1,0 +1,7 @@
+services:
+    app.request_saver:
+        class: AppBundle\Services\RequestSaverService
+        arguments: ['@doctrine.orm.default_entity_manager']
+    app.request_finder:
+        class: AppBundle\Services\RequestFinderService
+        arguments: ['@doctrine.orm.default_entity_manager']
