@@ -2,11 +2,9 @@
 
 namespace AppBundle\Services;
 
-
 use AppBundle\Dto\Api\RequestQueryDto;
 use AppBundle\Dto\Domain\RequestQuery;
 use AppBundle\Entity\RequestEntity;
-use AppBundle\Utils\ParamsType;
 use Doctrine\ORM\EntityManagerInterface;
 
 class RequestFinderService
@@ -39,16 +37,5 @@ class RequestFinderService
         $requestQuery->lastDays = $requestQueryDto->lastDays;
 
         return $this->em->getRepository(RequestEntity::class)->findByParams($requestQuery);
-    }
-
-    public function paramsValidate($params)
-    {
-        foreach ($params as $key => $param){
-            if(false === in_array($key, ParamsType::all())){
-                return false;
-            }
-        }
-
-        return true;
     }
 }

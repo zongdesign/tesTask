@@ -5,7 +5,6 @@ namespace AppBundle\Controller\Api;
 use AppBundle\Dto\Api\RequestDto;
 use AppBundle\Dto\Api\RequestQueryDto;
 use AppBundle\Entity\RequestEntity;
-use AppBundle\Utils\ParamsType;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
